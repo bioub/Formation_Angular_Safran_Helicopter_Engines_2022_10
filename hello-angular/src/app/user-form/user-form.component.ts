@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-form',
@@ -12,8 +12,6 @@ export class UserFormComponent implements OnInit {
     active: false,
     role: 'admin'
   };
-
-  constructor() { }
 
   ngOnInit(): void {
   }

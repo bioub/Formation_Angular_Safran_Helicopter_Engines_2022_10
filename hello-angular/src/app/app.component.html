@@ -2,3 +2,15 @@
 <app-clock></app-clock>
 <app-user-form></app-user-form>
 <app-counter></app-counter>
+<app-select #selectRef></app-select>
+
+{{ selectRef.value }}
+
+<button *appIsAdmin>Accessible si admin</button>
+
+
+<input type="text" [value]="name" (input)="name = inputRef.value" #inputRef>
+
+<p>
+  Value : {{ name }}
+</p>

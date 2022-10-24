@@ -9,9 +9,13 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { CounterComponent } from './counter/counter.component';
 import { ExHelloworldComponent } from './ex-helloworld/ex-helloworld.component';
 import { ExMultiStateButtonComponent } from './ex-multi-state-button/ex-multi-state-button.component';
+import { RequiredDirective } from './required.directive';
+import { SelectComponent } from './select/select.component';
+import { IsAdminDirective } from './is-admin.directive';
 
 @NgModule({
   declarations: [
+    // component, pipe ou directive
     AppComponent,
     HelloComponent,
     CamelCasePipe,
@@ -19,7 +23,10 @@ import { ExMultiStateButtonComponent } from './ex-multi-state-button/ex-multi-st
     UserFormComponent,
     CounterComponent,
     ExHelloworldComponent,
-    ExMultiStateButtonComponent
+    ExMultiStateButtonComponent,
+    RequiredDirective,
+    SelectComponent,
+    IsAdminDirective
   ],
   imports: [
     BrowserModule, // import indirect de CommonModule
