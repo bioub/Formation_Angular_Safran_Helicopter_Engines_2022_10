@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelloComponent implements OnInit {
 
-  name = 'Jean-Philippe';
+  @Input() name = 'Toto';
 
   constructor() { }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.name = 'Jean-Philippe';
-    }, 3000);
+    // setTimeout(() => {
+    //   this.name = 'Jean-Philippe';
+    // }, 3000);
   }
 
   upperCase(str: string) {

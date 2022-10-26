@@ -5,7 +5,7 @@
     <!-- <input [class.invalid]="user.username === ''" [class.valid]="user.username !== ''" class="form-input" type="text" [value]="user.username" (input)="setUserName($any($event.target).value)"> -->
     <!-- <input [ngClass]="{invalid: user.username === '', valid: user.username !== ''}" class="form-input" type="text" [value]="user.username" (input)="setUserName($any($event.target).value)"> -->
     <!-- <input [ngStyle]="{border: user.username === '' ? '2px solid red' : '2px solid green' }" class="form-input" type="text" [value]="user.username" (input)="setUserName($any($event.target).value)"> -->
-    <input appRequired class="form-input" type="text" [value]="user.username" (input)="setUserName($any($event.target).value)">
+    <input [appRequired]="['is-valid', 'is-not-valid']"  class="form-input" type="text" [value]="user.username" (input)="setUserName($any($event.target).value)">
 
   </div>
   <div>
