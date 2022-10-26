@@ -1,1 +1,13 @@
-<p>user-add works!</p>
+<form [formGroup]="userFormGroup" (ngSubmit)="createUser()">
+  <div>
+    <label>Username</label>
+    <input class="form-input" type="text" formControlName="username" >
+  </div>
+  <div>
+    <label>Email</label>
+    <input class="form-input" type="email" formControlName="email" >
+  </div>
+  <div>
+    <button>Register</button>
+  </div>
+</form>

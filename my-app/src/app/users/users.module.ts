@@ -7,6 +7,7 @@ import { UsersComponent } from './users.component';
 import { UserAddComponent } from './user-add/user-add.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserService } from './user.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { UserService } from './user.service';
   imports: [
     SharedModule,
     UsersRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [
     // {

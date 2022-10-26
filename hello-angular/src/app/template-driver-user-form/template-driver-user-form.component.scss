@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+
+.ng-touched.ng-valid:not(form), .ng-submitted .ng-valid:not(form) {
+  border: 2px solid green;
+}
+
+.ng-touched.ng-invalid:not(form), .ng-submitted .ng-invalid:not(form)  {
+  border: 2px solid red;
+}

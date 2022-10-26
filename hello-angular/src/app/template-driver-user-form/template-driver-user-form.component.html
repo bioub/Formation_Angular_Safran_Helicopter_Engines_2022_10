@@ -1,0 +1,25 @@
+<form #ngForm="ngForm">
+  <div>
+    <label>Username</label>
+    <input name="username" required maxlength="5" class="form-input" type="text" [ngModel]="user.username" (ngModelChange)="user.username = $event" #usernameNgModel="ngModel">
+    <div *ngIf="usernameNgModel.invalid && (usernameNgModel.touched || ngForm.submitted)">
+      <div *ngIf="usernameNgModel.errors!['required']">Le champ est obligatoire</div>
+      <div *ngIf="usernameNgModel.errors!['maxlength']">Le champ doit faire moins de 5 caractères</div>
+    </div>
+  </div>
+  <div>
+    <label>Active</label>
+    <input name="active" type="checkbox" [ngModel]="user.active" (ngModelChange)="user.active = $event">
+  </div>
+  <div>
+    <label>Role</label>
+    <select name="role" [(ngModel)]="user.role">
+      <option>member</option>
+      <option>admin</option>
+    </select>
+  </div>
+  <div>
+    User : {{ user | json }}
+  </div>
+  <button>Register</button>
+</form>

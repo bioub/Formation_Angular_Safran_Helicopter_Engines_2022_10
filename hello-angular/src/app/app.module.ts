@@ -12,6 +12,8 @@ import { ExMultiStateButtonComponent } from './ex-multi-state-button/ex-multi-st
 import { RequiredDirective } from './required.directive';
 import { SelectComponent } from './select/select.component';
 import { IsAdminDirective } from './is-admin.directive';
+import { TemplateDriverUserFormComponent } from './template-driver-user-form/template-driver-user-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,10 +28,12 @@ import { IsAdminDirective } from './is-admin.directive';
     ExMultiStateButtonComponent,
     RequiredDirective,
     SelectComponent,
-    IsAdminDirective
+    IsAdminDirective,
+    TemplateDriverUserFormComponent
   ],
   imports: [
     BrowserModule, // import indirect de CommonModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
