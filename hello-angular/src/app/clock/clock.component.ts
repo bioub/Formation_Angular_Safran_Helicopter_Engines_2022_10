@@ -31,7 +31,7 @@ export class ClockComponent implements OnInit, OnChanges, OnDestroy {
     if (changes["delay"]?.currentValue !== changes["delay"]?.previousValue) {
       console.log('clearInterval');
 
-      // clearInterval(this._interval);
+      clearInterval(this._interval);
       this._interval = setInterval(() => {
         this.now = new Date();
         // detectChanges();
