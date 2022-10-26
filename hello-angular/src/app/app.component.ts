@@ -9,4 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   prenom = 'Romain';
 name= 'Romain'
+
+
+  showClock = true;
+  format = 'HH:mm';
+  delay = 2000;
 }

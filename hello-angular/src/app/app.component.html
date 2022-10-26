@@ -23,3 +23,16 @@
 <p>
   Value : {{ name }}
 </p>
+
+
+<button (click)="showClock = !showClock">{{ showClock ? 'Off' : 'On' }}</button>
+<div>
+  Delay :
+  <input type="number" [valueAsNumber]="delay" (input)="delay = $any($event.target).valueAsNumber" />
+</div>
+<div>
+  Format :
+  <input type="text" [value]="format" (input)="format = $any($event.target).value" />
+</div>
+
+<app-clock *ngIf="showClock" [format]="format" [delay]="delay"></app-clock>
